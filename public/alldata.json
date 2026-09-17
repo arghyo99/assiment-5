@@ -12,7 +12,7 @@
   {
     "id": "python",
     "name": "Python",
-    "category": "Programming Language",
+    "category": "Backend",
     "description": "A high-level, interpreted programming language known for its clear syntax and versatility in AI and web dev.",
     "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
     "rating": 4.9,
@@ -22,7 +22,7 @@
   {
     "id": "typescript",
     "name": "TypeScript",
-    "category": "Programming Language",
+    "category": "Frontend",
     "description": "A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
     "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
     "rating": 4.8,
@@ -118,16 +118,6 @@
     "rating": 4.8,
     "difficulty": "Advanced",
     "badge": "Enterprise Choice"
-  },
-  {
-    "id": "golang",
-    "name": "Go",
-    "category": "Programming Language",
-    "description": "An open-source programming language supported by Google that makes it easy to build simple, fast, and reliable software.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Go.svg",
-    "rating": 4.8,
-    "difficulty": "Intermediate",
-    "badge": "High Performance"
   },
   {
     "id": "aws",
