@@ -9,7 +9,7 @@ import Readlist from "./component/Readlist"
 import Toast from "./component/Toast"
 
 const facData = async () => {
-  const res = await fetch('../public/alldata.json')
+  const res = await fetch('/alldata.json')
   const data = await res.json()
   return data
 }
