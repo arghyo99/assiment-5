@@ -16,8 +16,8 @@ const HeroSection = () => {
             <p>compare them side by side, and put together the stack that fits your</p>
             <p>next project.</p>
           </div>
-          <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-            <button className="bg-linear-to-r from-[#FF6B00] via-[#F84352] to-[#E83C8D] text-white px-6 py-2 rounded-[8px] font-semibold text-lg shadow-sm">
+          <div className=" cursor-pointer mt-10 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+            <button className=" cursor-pointer bg-linear-to-r from-[#FF6B00] via-[#F84352] to-[#E83C8D] text-white px-6 py-2 rounded-[8px] font-semibold text-lg shadow-sm">
               Explore Technologies
             </button>
             <button className="border border-[#E2E8F0] text-[#374151] bg-white px-10 py-2 rounded-[8px] text-lg hover:bg-gray-50 transition-all">
