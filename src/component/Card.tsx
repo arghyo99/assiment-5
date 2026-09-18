@@ -34,7 +34,7 @@ const Card = ({
       <div className="flex items-center gap-2 text-sm text-gray-600">
         <span className="border border-gray-300 rounded-full px-3 py-1">{card.category}</span>
         <span className="border border-gray-300 rounded-full px-3 py-1">{card.difficulty}</span>
-        <span className="ml-auto flex items-center gap-1 text-yellow-500 font-medium">
+        <span className="ml-auto flex items-center gap-1 text-gray-500 font-medium">
           ⭐ {card.rating}
         </span>
       </div>
