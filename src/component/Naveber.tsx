@@ -35,7 +35,7 @@ const Naveber = () => {
         </div>
 
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-5">
           <button className="hidden md:block text-[#334155] cursor-pointer">Sign In</button>
           <button className="bg-[#D91B7E] text-white px-4 py-1.5 rounded-full font-medium text-sm md:text-base md:px-5 md:py-2 cursor-pointer">
             Sign Up
