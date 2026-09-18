@@ -1,4 +1,4 @@
-DevStack
+My project name : DevStack
 
 📌 Description
 DevStack is a developer tool explorer where users can browse frontend, backend, database, and tooling technologies, compare them side by side, and build their own ideal development stack by adding or removing tools from a personalized list — all in a clean, modern interface.
