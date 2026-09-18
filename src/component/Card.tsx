@@ -12,12 +12,14 @@ const Card = ({
   const isAdded = stack.some((item) => item.id === card.id)
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-5 flex flex-col gap-4 shadow-sm">
+    <div className="bg-white rounded-3xl border border-gray-200 p-6 flex flex-col gap-4 shadow-sm hover:border-pink-300 transition-colors duration-500 ease-in-out">
+
+
 
    
       <div className="flex items-center justify-between">
         <img src={card.icon} alt={card.name} width={44} height={44} />
-        <span className="text-xs font-medium border rounded-full px-3 py-1 text-blue-500 border-blue-300">
+        <span className="text-xs font-medium border rounded-full px-3 py-1 text-pink-500 border-pink-300">
           {card.badge}
         </span>
       </div>
@@ -43,11 +45,11 @@ const Card = ({
         disabled={isAdded}
         className={`w-full py-3 rounded-xl font-medium transition-colors cursor-pointer
           ${isAdded
-            ? "bg-green-500 text-white cursor-not-allowed opacity-80"
-            : "bg-gray-900 text-white hover:bg-gray-700"
+            ? " bg-pink-300 text-pink-600 cursor-not-allowed opacity-80"
+            : "bg-gray-900 text-white hover:bg-gray-700 transition-colors duration-600 ease-in-out"
           }`}
       >
-        {isAdded ? "✓ Added" : "Add to Stack"}
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
 
     </div>
