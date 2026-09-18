@@ -16,7 +16,7 @@ const Readlist = ({
       <div>
         <h2 className="text-lg font-bold text-gray-900">Your Stack</h2>
         {stack.length === 0 ? (
-          <p className="text-sm text-gray-400">No technologies selected yet.</p>
+          <p className="text-sm text-gray-400">No technologies selected </p>
         ) : (
           <p className="text-sm text-gray-500">{stack.length} Technology Selected</p>
         )}
