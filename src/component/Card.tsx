@@ -45,7 +45,7 @@ const Card = ({
         disabled={isAdded}
         className={`w-full py-3 rounded-xl font-medium transition-colors cursor-pointer
           ${isAdded
-            ? " bg-pink-300 text-pink-600 cursor-not-allowed opacity-80"
+            ? "bg-pink-100 text-pink-600 opacity-80 hover:cursor-not-allowed rounded-xl p-4 transition-all duration-300"
             : "bg-gray-900 text-white hover:bg-gray-700 transition-colors duration-600 ease-in-out"
           }`}
       >
