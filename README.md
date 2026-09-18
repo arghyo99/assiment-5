@@ -57,7 +57,7 @@ toast দিয়ে notification মেসেজ দেখানো/লুক�
 }``
 
 const dataPromise = facData()
-এই dataPromise-কে Cards.tsx-এ use(dataPromise) দিয়ে সরাসরি পড়া হয়েছে, এবং App.tsx-এ <Suspense fallback={<h2>Loading.....</h2>}> দিয়ে wrap করা হয়েছে — যাতে ডেটা লোড হওয়ার সময় "Loading..." দেখানো যায়। এটা useEffect + useState দিয়ে ডেটা fetch করার একটা আধুনিক বিকল্প পদ্ধতি।
+এই dataPromise-কে Cards.tsx-এ use(dataPromise) দিয়ে সরাসরি পড়া হয়েছে, এবং App.tsx-এ ``<Suspense fallback={<h2>Loading.....</h2>}>`` দিয়ে wrap করা হয়েছে — যাতে ডেটা লোড হওয়ার সময় "Loading..." দেখানো যায়। এটা useEffect + useState দিয়ে ডেটা fetch করার একটা আধুনিক বিকল্প পদ্ধতি।
 
 
 ৫. .map() লিস্টের প্রতিটা item-এ কেন unique key prop দরকার?
