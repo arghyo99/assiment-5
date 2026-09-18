@@ -36,8 +36,8 @@ State হলো একটা component-এর নিজস্ব ডেটা, �
 
 এই প্রজেক্টে App.tsx-এ দুইবার ব্যবহার হয়েছে:
 
-const [stack, setStack] = useState<apiDataType[]>([])
-const [toast, setToast] = useState<string | null>(null)
+``const [stack, setStack] = useState<apiDataType[]>([])
+const [toast, setToast] = useState<string | null>(null)``
 
 stack দিয়ে ইউজারের বেছে নেওয়া টেকনোলজিগুলোর তালিকা রাখা হয়েছে।
 toast দিয়ে notification মেসেজ দেখানো/লুকানো নিয়ন্ত্রণ করা হয়েছে।
@@ -50,11 +50,11 @@ toast দিয়ে notification মেসেজ দেখানো/লুক�
 
 তবে এই প্রজেক্টে সরাসরি useEffect ব্যবহার করা হয়নি — এখানে React-এর নতুন use() hook এবং Suspense দিয়ে একই কাজটা করা হয়েছে:
 
-const facData = async () => {
+``const facData = async () => {
   const res = await fetch('/alldata.json')
   const data = await res.json()
   return data
-}
+}``
 
 const dataPromise = facData()
 এই dataPromise-কে Cards.tsx-এ use(dataPromise) দিয়ে সরাসরি পড়া হয়েছে, এবং App.tsx-এ <Suspense fallback={<h2>Loading.....</h2>}> দিয়ে wrap করা হয়েছে — যাতে ডেটা লোড হওয়ার সময় "Loading..." দেখানো যায়। এটা useEffect + useState দিয়ে ডেটা fetch করার একটা আধুনিক বিকল্প পদ্ধতি।
@@ -66,32 +66,35 @@ const dataPromise = facData()
 
 এই প্রজেক্টে Cards.tsx-এ:
 
-allCards.map((singelcard) => (
+``allCards.map((singelcard) => (
   <Card key={singelcard.id} card={singelcard} onAdd={onAdd} stack={stack} />
-))
+))``
+
 এখানে প্রতিটা card-এর id কে key হিসেবে ব্যবহার করা হয়েছে, একইভাবে Readlist.tsx-এও item.id কে key দেওয়া হয়েছে।
 
 
 ৬. Conditional Rendering কী? একটা উদাহরণ দাও।
 
-উত্তর: Conditional Rendering মানে হলো — কোনো শর্ত (condition) সত্যি না মিথ্যা তার উপর ভিত্তি করে ভিন্ন ভিন্ন UI দেখানো। JavaScript-এর if, ternary (? :), বা && operator ব্যবহার করে এটা করা হয়।
+উত্তর: Conditional Rendering মানে হলো — কোনো শর্ত (condition) সত্যি না মিথ্যা তার উপর ভিত্তি করে ভিন্ন ভিন্ন UI দেখানো। JavaScript-এর ``if, ternary (? :), বা && operator `` ব্যবহার করে এটা করা হয়।
 
 উদাহরণ, Readlist.tsx-এ যখন stack খালি থাকে তখন একটা মেসেজ দেখানো হয়:
 
-{stack.length === 0 ? (
+``{stack.length === 0 ? (
   <p className="text-sm text-gray-400">No technologies selected </p>
 ) : (
   <p className="text-sm text-gray-500">{stack.length} Technology Selected</p>
-)}
+)}``
+
+
 অর্থাৎ, stack-এ কিছু না থাকলে "No technologies selected " দেখাবে, আর থাকলে কতগুলো টেকনোলজি সিলেক্ট করা হয়েছে সেটা দেখাবে।
 
 
 ৭. Parent থেকে Child-এ ডেটা কীভাবে পাঠানো হয়, আর Child কীভাবে Parent-কে কিছু ফেরত পাঠায়?
 
 উত্তর: Parent → Child: Parent component তার data props হিসেবে child-কে পাঠায়। যেমন App.tsx (parent) থেকে Readlist (child)-কে stack prop হিসেবে পাঠানো হয়েছে:
-<Readlist stack={stack} onRemove={handleRemove} onRemoveAll={handleRemoveAll} />
+``<Readlist stack={stack} onRemove={handleRemove} onRemoveAll={handleRemoveAll} />``
 
 Child → Parent: যেহেতু child সরাসরি parent-এর state পরিবর্তন করতে পারে না, তাই parent একটা function বানিয়ে সেটাকে prop হিসেবে child-কে পাঠায়। Child সেই function-কে কল করলে parent-এর state আপডেট হয়। যেমন Card.tsx (child)-এ বাটনে ক্লিক করলে:
-<button onClick={() => onAdd(card)}>Add to Stack</button>
+``<button onClick={() => onAdd(card)}>Add to Stack</button>``
 
 এখানে onAdd আসলে App.tsx-এর handleAdd function, যেটা props হিসেবে Cards.tsx হয়ে Card.tsx পর্যন্ত পৌঁছেছে। Child বাটনে ক্লিক করে সেই function কল করলে, parent-এর stack state আপডেট হয়ে যায়।
