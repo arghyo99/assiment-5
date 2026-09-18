@@ -21,7 +21,7 @@ Fully Responsive Design
 
 ১. JSX কী, এবং React-এ এটা কেন ব্যবহার করা হয়?
 
-উত্তর: JSX হলো JavaScript-এর ভেতরে সরাসরি HTML-এর মতো কোড লেখার একটা পদ্ধতি (যেমন <div>...</div>)। এটা আসলে JavaScript নয়, কিন্তু React একে compile করে সাধারণ JavaScript function-এ রূপান্তর করে। এটা ব্যবহার করা হয় কারণ এতে UI-এর গঠন আর logic একসাথে, একই জায়গায় লেখা যায় — ফলে কোড পড়তে ও বুঝতে সহজ হয়। যেমন :
+উত্তর: JSX হলো JavaScript-এর ভেতরে সরাসরি HTML-এর মতো কোড লেখার একটা পদ্ধতি । এটা আসলে JavaScript নয়, কিন্তু React একে compile করে সাধারণ JavaScript function-এ রূপান্তর করে। এটা ব্যবহার করা হয় কারণ এতে UI-এর গঠন আর logic একসাথে, একই জায়গায় লেখা যায় — ফলে কোড পড়তে ও বুঝতে সহজ হয়। যেমন :
 এই প্রজেক্টের HeroSection.tsx-এ <h2>Build Your Ideal</h2> লেখাটা JSX।
 
 ২. Props এবং State-এর মধ্যে পার্থক্য কী?
